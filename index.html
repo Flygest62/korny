@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Голос народа — народы и история Дагестана для детей</title>
+<title>Голос народа — 10 народов и история Дагестана для детей</title>
 <style>
 :root {
   --caspian: #0f3d5c;
@@ -32,7 +32,7 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
 .topbar {
   background: var(--caspian);
   color: #fff;
-  padding: 14px 24px;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,36 +40,49 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
   top: 0;
   z-index: 50;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  gap: 12px;
+  flex-wrap: wrap;
 }
 .brand {
   font-family: 'Georgia', serif;
   font-size: 1.25rem;
   font-weight: bold;
   color: #fff;
-  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
 }
 .brand span { color: var(--gold); }
-.nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.nav-links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .nav-link {
   background: none;
   border: none;
-  color: rgba(255,255,255,0.85);
-  font-size: 0.92rem;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
   cursor: pointer;
   font-family: inherit;
   transition: color 0.2s;
 }
 .nav-link:hover { color: var(--gold); }
+.passport-pill {
+  background: rgba(212, 162, 78, 0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.passport-pill:hover { background: rgba(212, 162, 78, 0.35); }
 
 /* HERO */
 .hero {
   background: linear-gradient(135deg, var(--caspian) 0%, var(--caspian-light) 65%, #2a6f8f 100%);
   color: #fff;
-  padding: 56px 20px 84px;
+  padding: 50px 20px 78px;
   text-align: center;
   position: relative;
 }
@@ -87,19 +100,19 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
 .hero p { font-size: clamp(1rem, 2vw, 1.15rem); max-width: 650px; margin: 0 auto; opacity: 0.92; }
 .hero .badge {
   display: inline-block;
-  margin-top: 22px;
+  margin-top: 20px;
   padding: 7px 18px;
   border: 1px solid var(--gold);
   color: var(--gold);
   border-radius: 40px;
   font-size: 0.85rem;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
 }
 
 /* CONTAINER & SECTIONS */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 .section { margin-top: 64px; }
-.section-title { text-align: center; margin-bottom: 32px; }
+.section-title { text-align: center; margin-bottom: 30px; }
 .section-title h2 { color: var(--caspian); font-size: clamp(1.6rem, 3vw, 2.2rem); }
 .section-title p { color: var(--muted); margin-top: 6px; font-size: 1rem; }
 
@@ -111,7 +124,7 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
   box-shadow: var(--shadow);
   padding: 20px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 24px;
   align-items: center;
 }
@@ -128,36 +141,33 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
   stroke-width: 2.5;
   stroke-linejoin: round;
 }
-.dag-mountains {
-  fill: #e4d5b7;
-  opacity: 0.7;
-}
+.dag-mountains { fill: #e4d5b7; opacity: 0.75; }
 .map-pin {
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-box: fill-box;
   transform-origin: center;
 }
-.map-pin:hover { transform: scale(1.15); }
-.map-pin circle { stroke: #fff; stroke-width: 2.5; }
+.map-pin:hover { transform: scale(1.22); }
+.map-pin circle { stroke: #fff; stroke-width: 2; }
 .map-pin text {
   fill: #fff;
-  font-size: 10px;
+  font-size: 8.5px;
   font-weight: 700;
   text-anchor: middle;
   pointer-events: none;
   font-family: sans-serif;
 }
-.map-legend h3 { color: var(--caspian); margin-bottom: 10px; font-size: 1.3rem; }
-.map-legend p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
-.legend-list { display: flex; flex-direction: column; gap: 8px; }
+.map-legend h3 { color: var(--caspian); margin-bottom: 8px; font-size: 1.25rem; }
+.map-legend p { color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+.legend-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
+  gap: 8px;
+  padding: 8px 10px;
   background: var(--cream);
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
   border: none;
@@ -165,22 +175,22 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
   font-family: inherit;
   width: 100%;
 }
-.legend-item:hover { background: #ede3d3; transform: translateX(4px); }
-.legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
-.legend-name { font-weight: 700; color: var(--caspian); font-size: 0.95rem; }
-.legend-area { font-size: 0.8rem; color: var(--muted); margin-left: auto; }
+.legend-item:hover { background: #ede3d3; transform: translateX(3px); }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.legend-name { font-weight: 700; color: var(--caspian); font-size: 0.88rem; }
+.legend-check { margin-left: auto; font-size: 0.85rem; }
 
 /* NATIONS GRID */
 .nations-grid {
   margin-top: 36px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 .nation-card {
   background: var(--card);
   border-radius: var(--radius);
-  padding: 24px 18px;
+  padding: 22px 16px;
   text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(15,61,92,0.07);
@@ -189,31 +199,101 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .nation-card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(15,61,92,0.15); }
+.visited-stamp {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #e6f4ea;
+  color: #1e7e34;
+  font-size: 0.72rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
 .nation-card .dot {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
-.nation-card h3 { font-size: 1.2rem; color: var(--caspian); }
-.nation-card .self { font-size: 0.88rem; color: var(--muted); font-style: italic; margin-bottom: 8px; }
+.nation-card h3 { font-size: 1.15rem; color: var(--caspian); }
+.nation-card .self { font-size: 0.84rem; color: var(--muted); font-style: italic; margin-bottom: 10px; }
 .nation-card .open-pill {
   margin-top: auto;
-  padding: 6px 14px;
+  padding: 5px 12px;
   background: var(--cream);
   color: var(--caspian);
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
 }
+
+/* PASSPORT OF EXPLORER */
+.passport-box {
+  background: linear-gradient(135deg, #fffdf9 0%, #f5ede0 100%);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.passport-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.passport-header h3 { color: var(--caspian); font-size: 1.45rem; }
+.progress-bar-wrap {
+  width: 100%;
+  height: 14px;
+  background: #e5dccb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--terracotta), var(--gold));
+  width: 0%;
+  transition: width 0.5s ease;
+}
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+.badge-item {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e6dec8;
+  opacity: 0.45;
+  filter: grayscale(1);
+  transition: all 0.3s;
+}
+.badge-item.unlocked {
+  opacity: 1;
+  filter: none;
+  border-color: var(--gold);
+  box-shadow: 0 4px 12px rgba(212, 162, 78, 0.2);
+}
+.badge-icon { font-size: 1.8rem; flex-shrink: 0; }
+.badge-info h4 { font-size: 0.95rem; color: var(--caspian); }
+.badge-info p { font-size: 0.8rem; color: var(--muted); line-height: 1.3; }
 
 /* HISTORY OF DAGESTAN (TIMELINE) */
 .dag-history-box {
@@ -251,8 +331,8 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
 .era-card h3 { font-size: 1.1rem; color: var(--caspian); margin-bottom: 8px; }
 .era-card p { font-size: 0.9rem; color: var(--muted); }
 
-/* SEARCH & WOTD & QUIZ */
-.search-wrap, .quiz, .tree {
+/* SEARCH & WOTD & GAMES */
+.search-wrap, .quiz, .memory-box, .tree {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -293,34 +373,78 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
 .wotd .word { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: bold; margin: 10px 0 4px; }
 .wotd .translation { color: var(--gold); font-size: 1.15rem; margin-top: 6px; }
 
-.quiz .question { text-align: center; margin-bottom: 20px; }
-.quiz .greeting { font-size: 2rem; font-weight: bold; color: var(--terracotta); margin: 8px 0; }
-.quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+/* GAMES GRID (QUIZ + MEMORY) */
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.quiz .question { text-align: center; margin-bottom: 18px; }
+.quiz .greeting { font-size: 1.9rem; font-weight: bold; color: var(--terracotta); margin: 8px 0; }
+.quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .quiz-opt {
-  padding: 14px;
+  padding: 12px;
   border: 2px solid #e0d8c8;
   background: var(--cream);
   border-radius: 12px;
   cursor: pointer;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.92rem;
   color: var(--caspian);
   font-weight: 600;
 }
 .quiz-opt:hover:not(:disabled) { border-color: var(--terracotta); }
 .quiz-opt.correct { background: #d4edda; border-color: #28a745; color: #155724; }
 .quiz-opt.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
-.quiz-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; flex-wrap: wrap; gap: 12px; }
+.quiz-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; flex-wrap: wrap; gap: 10px; }
 .next-btn {
   background: var(--terracotta);
   color: #fff;
   border: none;
-  padding: 12px 26px;
+  padding: 10px 22px;
   border-radius: 40px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
+
+/* MEMORY GAME */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+.mem-card {
+  aspect-ratio: 1 / 0.85;
+  background: var(--caspian);
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.88rem;
+  transition: transform 0.2s, background 0.2s;
+  user-select: none;
+  border: 2px solid var(--caspian);
+}
+.mem-card.flipped {
+  background: var(--cream);
+  color: var(--caspian);
+  border-color: var(--gold);
+}
+.mem-card.matched {
+  background: #d4edda;
+  color: #155724;
+  border-color: #28a745;
+  cursor: default;
+}
+.mem-card small { font-size: 0.68rem; color: var(--terracotta); font-weight: normal; margin-top: 2px; }
 
 .tree { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .tree h3 { color: var(--caspian); margin-bottom: 12px; }
@@ -337,11 +461,7 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
-.nation-hero {
-  color: #fff;
-  padding: 40px 20px 56px;
-  position: relative;
-}
+.nation-hero { color: #fff; padding: 40px 20px 56px; position: relative; }
 .back-btn {
   display: inline-flex;
   align-items: center;
@@ -396,11 +516,7 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
   gap: 10px;
 }
 
-.history-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 28px;
-}
+.history-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; }
 .history-text p { margin-bottom: 14px; font-size: 1rem; color: var(--ink); }
 .traditions-card {
   background: var(--cream);
@@ -411,6 +527,22 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
 .traditions-card h3 { color: var(--caspian); font-size: 1.15rem; margin-bottom: 12px; }
 .traditions-card ul { padding-left: 18px; color: var(--ink); font-size: 0.94rem; }
 .traditions-card li { margin-bottom: 8px; }
+
+/* PROVERB BANNER */
+.proverb-card {
+  background: linear-gradient(135deg, #fdf8ef 0%, #f5ebd9 100%);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.proverb-native { font-family: 'Georgia', serif; font-size: 1.25rem; font-weight: bold; color: var(--caspian); }
+.proverb-ru { font-size: 0.98rem; color: var(--terracotta); font-style: italic; margin-top: 4px; }
 
 /* FAMOUS PEOPLE CARDS */
 .people-grid {
@@ -476,14 +608,16 @@ h1, h2, h3, h4 { font-family: 'Georgia', serif; letter-spacing: 0.2px; }
   position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px);
   background: var(--caspian); color: #fff; padding: 12px 24px; border-radius: 30px;
   font-size: 0.9rem; opacity: 0; transition: all 0.3s; z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
 footer { background: var(--caspian); color: #fff; text-align: center; padding: 36px 20px; margin-top: 70px; }
 footer .gold { color: var(--gold); }
 
-@media (max-width: 820px) {
-  .map-wrap, .nation-hero-grid, .history-grid, .tree { grid-template-columns: 1fr; }
+@media (max-width: 860px) {
+  .map-wrap, .nation-hero-grid, .history-grid, .games-grid, .tree { grid-template-columns: 1fr; }
+  .legend-list { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -493,10 +627,11 @@ footer .gold { color: var(--gold); }
 <nav class="topbar">
   <div class="brand" id="goHomeBrand">🏔️ Голос <span>народа</span></div>
   <div class="nav-links">
-    <button class="nav-link" onclick="showHome('mapSection')">Карта</button>
+    <button class="nav-link" onclick="showHome('mapSection')">Карта (10 народов)</button>
     <button class="nav-link" onclick="showHome('dagHistorySection')">История Дагестана</button>
     <button class="nav-link" onclick="showHome('searchSection')">Словарь</button>
-    <button class="nav-link" onclick="showHome('quizSection')">Викторина</button>
+    <button class="nav-link" onclick="showHome('gamesSection')">Игры</button>
+    <button class="passport-pill" onclick="showHome('passportSection')" id="navPassportBtn">🏅 Паспорт: 0/10</button>
   </div>
 </nav>
 
@@ -508,77 +643,77 @@ footer .gold { color: var(--gold); }
   <header class="hero">
     <h1>Голос народа</h1>
     <p>Детская интерактивная энциклопедия народов, языков и истории Страны гор.</p>
-    <div class="badge" id="heroBadge">5 народов · история · известные люди · словарь</div>
+    <div class="badge" id="heroBadge">10 коренных народов · история · пословицы · известные люди · игры</div>
   </header>
 
   <div class="container">
-    <!-- КАРТА ДАГЕСТАНА -->
+    <!-- КАРТА ДАГЕСТАНА (10 НАРОДОВ) -->
     <section class="map-section" id="mapSection">
       <div class="map-wrap">
         <div class="map-svg-box">
-          <!-- Реалистичный силуэт Республики Дагестан без тяжелых SVG-фильтров -->
-          <svg viewBox="0 0 460 540" role="img" aria-label="Карта Дагестана">
-            <!-- Море -->
-            <rect x="0" y="0" width="460" height="540" fill="#d9eef8"/>
-            <text x="375" y="210" fill="#4f8ba8" font-size="15" font-weight="bold" font-style="italic" transform="rotate(68 375 210)">Каспийское море</text>
+          <svg viewBox="0 0 460 560" role="img" aria-label="Карта Дагестана с 10 народами">
+            <rect x="0" y="0" width="460" height="560" fill="#d9eef8"/>
+            <text x="382" y="210" fill="#4f8ba8" font-size="14" font-weight="bold" font-style="italic" transform="rotate(68 382 210)">Каспийское море</text>
 
-            <!-- Контур Дагестана (от Кизляра и Ногайской степи на севере до Самура на юге) -->
             <path class="dag-land" d="
               M 95,35 L 255,32 L 265,65 L 245,95 L 268,125 L 250,155 L 265,185
               L 295,215 L 315,245 L 332,290 L 352,335 L 378,385 L 405,435
-              L 385,465 L 355,495 L 310,512 L 275,490 L 245,460 L 210,435
-              L 175,405 L 145,375 L 120,340 L 105,295 L 118,255 L 140,220
+              L 385,465 L 355,505 L 305,532 L 265,515 L 235,485 L 200,455
+              L 170,415 L 145,375 L 120,340 L 105,295 L 118,255 L 140,220
               L 130,180 L 105,145 L 115,105 L 88,70 Z
             "/>
 
-            <!-- Горный массив (Внутренний и Высокогорный Дагестан) -->
             <path class="dag-mountains" d="
-              M 135,230 L 185,215 L 235,245 L 275,295 L 325,365 L 355,440
-              L 310,495 L 255,455 L 185,395 L 125,325 Z
+              M 135,230 L 185,215 L 235,245 L 275,295 L 325,365 L 355,445
+              L 305,522 L 245,475 L 185,395 L 125,325 Z
             "/>
 
-            <!-- Реки Терек и Сулак (схематично) -->
-            <path d="M 115,155 Q 190,150 258,152" fill="none" stroke="#7ab8d6" stroke-width="2.5"/>
-            <path d="M 155,235 Q 225,225 288,220" fill="none" stroke="#7ab8d6" stroke-width="2.5"/>
+            <path d="M 115,155 Q 190,150 258,152" fill="none" stroke="#7ab8d6" stroke-width="2.2"/>
+            <path d="M 155,235 Q 225,225 288,220" fill="none" stroke="#7ab8d6" stroke-width="2.2"/>
+            <path d="M 210,465 Q 295,480 385,465" fill="none" stroke="#7ab8d6" stroke-width="2.2"/>
 
-            <!-- Города ориентиры -->
-            <circle cx="296" cy="242" r="4" fill="#1e2529"/>
-            <text x="305" y="245" font-size="10" fill="#1e2529" font-weight="bold">Махачкала</text>
+            <circle cx="298" cy="238" r="3.5" fill="#1e2529"/>
+            <text x="306" y="241" font-size="9.5" fill="#1e2529" font-weight="bold">Махачкала</text>
 
-            <circle cx="368" cy="392" r="4" fill="#1e2529"/>
-            <text x="376" y="395" font-size="10" fill="#1e2529" font-weight="bold">Дербент</text>
+            <circle cx="372" cy="395" r="3.5" fill="#1e2529"/>
+            <text x="380" y="398" font-size="9.5" fill="#1e2529" font-weight="bold">Дербент</text>
 
-            <!-- Интерактивные метки народов -->
-            <g class="map-pin" data-nation="kumyk" transform="translate(248, 195)">
-              <circle r="22" fill="#2a7a9c"/>
-              <text y="4">КУМ</text>
+            <g class="map-pin" data-nation="nogai" transform="translate(175, 85)">
+              <circle r="19" fill="#b5651d"/><text y="3.5">НОГ</text>
             </g>
-
-            <g class="map-pin" data-nation="avar" transform="translate(168, 275)">
-              <circle r="24" fill="#c0563b"/>
-              <text y="4">АВАР</text>
+            <g class="map-pin" data-nation="kumyk" transform="translate(248, 192)">
+              <circle r="19" fill="#2a7a9c"/><text y="3.5">КУМ</text>
             </g>
-
-            <g class="map-pin" data-nation="lak" transform="translate(232, 330)">
-              <circle r="21" fill="#d4a24e"/>
-              <text y="4" style="fill:#1e2529">ЛАК</text>
+            <g class="map-pin" data-nation="avar" transform="translate(168, 272)">
+              <circle r="21" fill="#c0563b"/><text y="3.5">АВАР</text>
             </g>
-
-            <g class="map-pin" data-nation="dargin" transform="translate(285, 325)">
-              <circle r="22" fill="#6a4c93"/>
-              <text y="4">ДАРГ</text>
+            <g class="map-pin" data-nation="lak" transform="translate(228, 330)">
+              <circle r="18" fill="#d4a24e"/><text y="3.5" style="fill:#1e2529">ЛАК</text>
             </g>
-
-            <g class="map-pin" data-nation="lezgin" transform="translate(332, 448)">
-              <circle r="23" fill="#2d8a5e"/>
-              <text y="4">ЛЕЗГ</text>
+            <g class="map-pin" data-nation="dargin" transform="translate(284, 322)">
+              <circle r="19" fill="#6a4c93"/><text y="3.5">ДАРГ</text>
+            </g>
+            <g class="map-pin" data-nation="agul" transform="translate(268, 392)">
+              <circle r="17" fill="#3d7a8a"/><text y="3.5">АГУЛ</text>
+            </g>
+            <g class="map-pin" data-nation="tabasaran" transform="translate(328, 398)">
+              <circle r="18" fill="#a83256"/><text y="3.5">ТАБ</text>
+            </g>
+            <g class="map-pin" data-nation="tsakhur" transform="translate(212, 442)">
+              <circle r="17" fill="#4f6d7a"/><text y="3.5">ЦАХ</text>
+            </g>
+            <g class="map-pin" data-nation="rutul" transform="translate(265, 468)">
+              <circle r="17" fill="#7c5295"/><text y="3.5">РУТ</text>
+            </g>
+            <g class="map-pin" data-nation="lezgin" transform="translate(334, 462)">
+              <circle r="20" fill="#2d8a5e"/><text y="3.5">ЛЕЗГ</text>
             </g>
           </svg>
         </div>
 
         <div class="map-legend">
-          <h3>Выбери народ на карте</h3>
-          <p>Нажми на кружок на карте или на название из списка, чтобы открыть отдельную страницу народа: узнать его историю, знаменитых героев и послушать родную речь.</p>
+          <h3>10 народов на карте Дагестана</h3>
+          <p>Изучи все 10 народов, чтобы собрать полную коллекцию значков в «Паспорте юного исследователя»!</p>
           <div class="legend-list" id="mapLegendList"></div>
         </div>
       </div>
@@ -586,6 +721,27 @@ footer .gold { color: var(--gold); }
 
     <!-- КАРТОЧКИ НАРОДОВ -->
     <section class="nations-grid" id="nationsGrid"></section>
+
+    <!-- ПАСПОРТ ЮНОГО ИССЛЕДОВАТЕЛЯ -->
+    <section class="section" id="passportSection">
+      <div class="section-title">
+        <h2>Паспорт юного исследователя Дагестана</h2>
+        <p>Открывай страницы народов и побеждай в играх, чтобы получить все награды</p>
+      </div>
+      <div class="passport-box">
+        <div class="passport-header">
+          <div>
+            <h3>Твой прогресс путешествия</h3>
+            <p style="color:var(--muted);font-size:0.9rem" id="passportSubtitle">Изучено народов: 0 из 10</p>
+          </div>
+          <div style="font-weight:bold;color:var(--terracotta)" id="passportRank">Звание: Новичок в горах</div>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="passportProgress"></div>
+        </div>
+        <div class="badges-grid" id="badgesGrid"></div>
+      </div>
+    </section>
 
     <!-- ИСТОРИЯ ДАГЕСТАНА -->
     <section class="section" id="dagHistorySection">
@@ -606,17 +762,17 @@ footer .gold { color: var(--gold); }
           <div class="era-card">
             <span class="era-date">VII – XV века</span>
             <h3>Приход ислама и вольные общества</h3>
-            <p>Дагестан становится одним из главных центров науки и просвещения на Кавказе. В горах формируются уникальные «вольные общества» (джамааты), где жители сами выбирали старейшин и судей, а также крупные владения: Аварское ханство, Кази-Кумухское шамхальство и Кайтагское уцмийство.</p>
+            <p>Дагестан становится одним из главных центров науки и просвещения на Кавказе. В горах формируются «вольные общества» (джамааты), где жители сами выбирали старейшин и судей, а также крупные владения: Аварское ханство, Кази-Кумухское шамхальство и Кайтагское уцмийство.</p>
           </div>
           <div class="era-card">
             <span class="era-date">XVIII – XIX века</span>
             <h3>Борьба за свободу и Имамат</h3>
-            <p>Горцы плечом к плечу защищали родную землю от нашествий Надир-шаха, а в XIX веке объединились вокруг имама <b>Шамиля</b>. После окончания Кавказской войны Дагестан вошёл в состав России, началось строительство дорог, школ и светских училищ.</p>
+            <p>Горцы плечом к плечу защищали родную землю от нашествий Надир-шаха, а в XIX веке объединились вокруг имама <b>Шамиля</b>. После окончания Кавказской войны Дагестан вошёл в состав России, началось строительство дорог и школ.</p>
           </div>
           <div class="era-card">
             <span class="era-date">XX – XXI века</span>
             <h3>Республика Дагестан</h3>
-            <p>20 января 1921 года была образована Дагестанская АССР. В годы Великой Отечественной войны десятки дагестанцев стали Героями Советского Союза. Сегодня Республика Дагестан — самый многонациональный регион России, славящийся своими поэтами, учёными, мастерами и олимпийскими чемпионами.</p>
+            <p>20 января 1921 года была образована Дагестанская АССР. В годы Великой Отечественной войны десятки дагестанцев стали Героями Советского Союза. Сегодня Республика Дагестан — самый многонациональный регион России, славящийся своими поэтами, учёными, мастерами и чемпионами.</p>
           </div>
         </div>
       </div>
@@ -625,11 +781,11 @@ footer .gold { color: var(--gold); }
     <!-- ПОИСК СЛОВ -->
     <section class="section" id="searchSection">
       <div class="section-title">
-        <h2>Найди слово на языках Дагестана</h2>
+        <h2>Найди слово на 10 языках Дагестана</h2>
         <p>Введи русское слово и посмотри, как оно звучит у разных народов</p>
       </div>
       <div class="search-wrap">
-        <input type="text" class="search-input" id="globalSearch" placeholder="Например: мама, вода, солнце, спасибо, гора...">
+        <input type="text" class="search-input" id="globalSearch" placeholder="Например: мама, вода, солнце, спасибо, хлеб...">
         <div class="search-results" id="searchResults"></div>
       </div>
     </section>
@@ -639,22 +795,36 @@ footer .gold { color: var(--gold); }
       <div class="wotd" id="wotd"></div>
     </section>
 
-    <!-- ВИКТОРИНА -->
-    <section class="section" id="quizSection">
+    <!-- ИГРОВАЯ ЗОНА: ВИКТОРИНА + НАЙДИ ПАРУ -->
+    <section class="section" id="gamesSection">
       <div class="section-title">
-        <h2>Викторина: угадай язык</h2>
-        <p>Проверь, хорошо ли ты запомнил слова народов Дагестана</p>
+        <h2>Игровая площадка</h2>
+        <p>Закрепи знания с помощью весёлых игр</p>
       </div>
-      <div class="quiz">
-        <div class="question">
-          <div style="color:var(--muted);font-size:0.9rem">Какому народу принадлежит это приветствие?</div>
-          <div class="greeting" id="quizGreeting">—</div>
+      <div class="games-grid">
+        <!-- ВИКТОРИНА -->
+        <div class="quiz">
+          <h3 style="color:var(--caspian);margin-bottom:10px;text-align:center">🎯 Угадай язык</h3>
+          <div class="question">
+            <div style="color:var(--muted);font-size:0.9rem" id="quizPrompt">Какому народу принадлежит слово?</div>
+            <div class="greeting" id="quizGreeting">—</div>
+          </div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div id="quizFeedback" style="text-align:center;margin-top:12px;font-weight:bold;min-height:1.4em"></div>
+          <div class="quiz-foot">
+            <div style="font-weight:bold;color:var(--caspian)" id="quizScore">Счёт: 0 / 0</div>
+            <button class="next-btn" id="nextQuiz">Дальше →</button>
+          </div>
         </div>
-        <div class="quiz-options" id="quizOptions"></div>
-        <div id="quizFeedback" style="text-align:center;margin-top:14px;font-weight:bold;min-height:1.4em"></div>
-        <div class="quiz-foot">
-          <div style="font-weight:bold;color:var(--caspian)" id="quizScore">Счёт: 0 / 0</div>
-          <button class="next-btn" id="nextQuiz">Следующий вопрос →</button>
+
+        <!-- ИГРА НАЙДИ ПАРУ -->
+        <div class="memory-box">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="color:var(--caspian)">🃏 Найди пару слов</h3>
+            <button class="next-btn" style="padding:6px 14px;font-size:0.8rem" onclick="initMemoryGame()">Заново</button>
+          </div>
+          <p style="color:var(--muted);font-size:0.85rem;margin-top:4px">Соедини слово на языке Дагестана с его переводом</p>
+          <div class="memory-grid" id="memoryGrid"></div>
         </div>
       </div>
     </section>
@@ -663,20 +833,20 @@ footer .gold { color: var(--gold); }
     <section class="section">
       <div class="section-title">
         <h2>Древо языков Дагестана</h2>
-        <p>Как языки делятся на семьи</p>
+        <p>Как 10 языков делятся на языковые семьи</p>
       </div>
       <div class="tree">
         <div>
           <h3>Нахско-дагестанская семья</h3>
           <ul>
             <li class="branch-title">Аваро-андо-цезская ветвь</li>
-            <li>Аварский, андийские и цезские языки</li>
+            <li>Аварский (а также андийские и цезские языки)</li>
             <li class="branch-title">Лакская ветвь</li>
             <li>Лакский язык</li>
             <li class="branch-title">Даргинская ветвь</li>
             <li>Даргинский язык</li>
             <li class="branch-title">Лезгинская ветвь</li>
-            <li>Лезгинский, табасаранский, рутульский, цахурский, агульский</li>
+            <li>Лезгинский, табасаранский, рутульский, агульский, цахурский</li>
           </ul>
         </div>
         <div>
@@ -688,7 +858,7 @@ footer .gold { color: var(--gold); }
             <li>Азербайджанский</li>
           </ul>
           <p style="margin-top:16px;padding:14px;background:var(--cream);border-radius:12px;font-size:0.9rem;color:var(--muted)">
-            💡 <b>Интересный факт:</b> Аварский, даргинский, лезгинский и лакский — «братья» из одной кавказской семьи, а кумыкский относится к тюркским языкам, поэтому звучит совсем иначе!
+            💡 <b>Интересный факт:</b> Лезгинский, табасаранский, рутульский, агульский и цахурский языки входят в одну лезгинскую ветвь — поэтому многие слова в них похожи! А кумыкский и ногайский относятся к тюркской семье.
           </p>
         </div>
       </div>
@@ -697,7 +867,7 @@ footer .gold { color: var(--gold); }
 </main>
 
 <!-- ============================================================
-     ОТДЕЛЬНАЯ СТРАНИЦА НАРОДА (динамически заполняется JS)
+     ОТДЕЛЬНАЯ СТРАНИЦА НАРОДА
      ============================================================ -->
 <section class="nation-page" id="nationPage">
   <div class="nation-hero" id="npHero">
@@ -715,9 +885,8 @@ footer .gold { color: var(--gold); }
   </div>
 
   <div class="container">
-    <!-- ИСТОРИЯ И КУЛЬТУРА НАРОДА -->
     <div class="page-block">
-      <h2>📜 История и традиции народа</h2>
+      <h2>📜 История, традиции и мудрость гор</h2>
       <div class="history-grid">
         <div class="history-text" id="npHistory"></div>
         <div class="traditions-card">
@@ -725,15 +894,14 @@ footer .gold { color: var(--gold); }
           <ul id="npTraditions"></ul>
         </div>
       </div>
+      <div class="proverb-card" id="npProverb"></div>
     </div>
 
-    <!-- ИЗВЕСТНЫЕ ЛИЦА НАРОДА -->
     <div class="page-block">
       <h2>⭐ Известные люди и герои</h2>
       <div class="people-grid" id="npPeople"></div>
     </div>
 
-    <!-- АЛФАВИТ И СЛОВАРЬ -->
     <div class="page-block">
       <h2>🗣️ Язык, алфавит и разговорник</h2>
       <div class="alphabet-steps" id="npAlphabet"></div>
@@ -746,12 +914,12 @@ footer .gold { color: var(--gold); }
 <div class="toast" id="toast"></div>
 
 <footer>
-  <p><span class="gold">Голос народа</span> · образовательный портал для детей о народах и истории Дагестана</p>
+  <p><span class="gold">Голос народа</span> · образовательный портал для детей о 10 народах и истории Дагестана</p>
 </footer>
 
 <script>
 /* ============================================================
-   БАЗА ДАННЫХ НАРОДОВ
+   БАЗА ДАННЫХ: 10 КОРЕННЫХ НАРОДОВ ДАГЕСТАНА + ПОСЛОВИЦЫ
    ============================================================ */
 const NATIONS = {
   avar: {
@@ -765,16 +933,20 @@ const NATIONS = {
       language: "Аварский (нахско-дагестанская семья)",
       dish: "Аварский хинкал с сушёным мясом и чесночным соусом"
     },
+    proverb: {
+      native: "«Гьудул гьечIев чи — куркьби гьечIеб хIинчI»",
+      ru: "Человек без друга — что птица без крыльев (Аварская пословица)"
+    },
     history: [
       "Аварцы — древний коренной народ Кавказа. В средние века на Хунзахском плато существовало сильное государство — Аварское нуцальство (ханство), правители которого носили титул «нуцал».",
       "В XIX веке аварские земли стали центром Кавказской войны и Северо-Кавказского имамата, который возглавлял имам Шамиль. Аварский язык в то время служил языком общения между многими горскими обществами.",
-      "В XX веке аварская литература и культура прославились на весь мир благодаря стихам Расула Гамзатова, а в XXI веке аварские спортсмены прославили Дагестан на олимпийских аренах."
+      "В XX веке аварская литература прославилась на весь мир благодаря стихам Расула Гамзатова, а сегодня аварские борцы и бойцы известны на всех мировых аренах."
     ],
     traditions: [
-      "Строительство боевых и сторожевых башен в горных аулах (например, в Гооре и Кахибе).",
+      "Строительство боевых и сторожевых башен в горных аулах (Гоор, Кахиб).",
       "Унцукульская насечка мельхиором и серебром по кизиловому дереву.",
       "Праздник первой борозды (Оц бай) — весенний обряд начала полевых работ.",
-      "Культ гостеприимства: гость в доме горца считался самым дорогим человеком."
+      "Строгий кодекс гостеприимства: гость в доме горца считался священным."
     ],
     people: [
       { name: "Расул Гамзатов", years: "1923–2003", role: "Великий поэт", bio: "Народный поэт Дагестана, автор бессмертных «Журавлей» и книги «Мой Дагестан», переведённой на десятки языков мира." },
@@ -783,7 +955,6 @@ const NATIONS = {
       { name: "Абдулрашид Садулаев", years: "род. 1996", role: "Олимпийский чемпион", bio: "Двукратный олимпийский чемпион по вольной борьбе, известный во всём мире как «Русский танк»." }
     ],
     alphabet: {
-      letters: 46,
       steps: [
         { label: "Аджам (арабская графика)", word: "ворч̣ами", note: "до 1928 года" },
         { label: "Латиница", word: "vorçami", note: "1928–1938 годы" },
@@ -794,7 +965,6 @@ const NATIONS = {
       greetings: { title: "Приветствия", icon: "👋", words: [
         { ru: "Привет / Здравствуй", native: "Ворч̣ами", tr: "Ворчами" },
         { ru: "Спасибо", native: "Баркала", tr: "Баркала" },
-        { ru: "Извини", native: "ТIасалъугьа", tr: "Тасалуга" },
         { ru: "Да", native: "Унго", tr: "Унго" },
         { ru: "Нет", native: "ГьечIо", tr: "Гечо" }
       ]},
@@ -804,17 +974,9 @@ const NATIONS = {
         { ru: "Брат", native: "Вац", tr: "Вац" },
         { ru: "Сестра", native: "Яц", tr: "Яц" }
       ]},
-      numbers: { title: "Числа", icon: "🔢", words: [
-        { ru: "Один", native: "Цо", tr: "Цо" },
-        { ru: "Два", native: "КIиго", tr: "Киго" },
-        { ru: "Три", native: "Лъабго", tr: "Лъабго" },
-        { ru: "Четыре", native: "Ункъо", tr: "Унко" },
-        { ru: "Пять", native: "Щуго", tr: "Щуго" }
-      ]},
       nature: { title: "Природа и еда", icon: "🌄", words: [
         { ru: "Вода", native: "Лъим", tr: "Лъим" },
         { ru: "Хлеб", native: "Чед", tr: "Чед" },
-        { ru: "Молоко", native: "Рахь", tr: "Рахь" },
         { ru: "Солнце", native: "Бакъ", tr: "Бак" },
         { ru: "Гора", native: "МегIер", tr: "Меэр" }
       ]}
@@ -826,31 +988,34 @@ const NATIONS = {
     self: "Дарган",
     area: "Центральный и Предгорный Дагестан",
     color: "#6a4c93",
-    lead: "Второй по численности народ Дагестана, прославившийся на весь мир своими искусными ювелирами, оружейниками и свободолюбивыми союзами вольных обществ.",
+    lead: "Второй по численности народ Дагестана, прославившийся на весь мир своими искусными ювелирами, гончарами и свободолюбивыми союзами вольных обществ.",
     facts: {
       capital: "Исторические центры — Акуша, Кубачи, Уркарах",
       language: "Даргинский (нахско-дагестанская семья)",
       dish: "Даргинское чуду с мясом, картофелем и травами"
     },
+    proverb: {
+      native: "«ГIяхIси гъайли мургьиличиб дурхъаси саби»",
+      ru: "Доброе слово дороже золота (Даргинская пословица)"
+    },
     history: [
-      "Даргинцы издавна населяли центральные предгорья и горы Дагестана. В средние века здесь сложилось могущественное Кайтагское уцмийство, а также знаменитая федерация вольных обществ — Акуша-Дарго.",
-      "В 1741 году именно в землях даргинцев (в Андалале и Кайтаге) горцы нанесли решающее поражение огромной армии персидского завоевателя Надир-шаха, отстояв независимость Дагестана.",
-      "Особую страницу в истории занимает высокогорный аул Кубачи — «село златокузнецов», чьи мастера столетиями изготавливали шедевры из серебра и холодного оружия для правителей Европы и Востока."
+      "Даргинцы издавна населяли центральные предгорья и горы Дагестана. В средние века здесь сложилось могущественное Кайтагское уцмийство, а также федерация вольных обществ Акуша-Дарго.",
+      "В 1741 году именно в землях даргинцев горцы нанесли решающее поражение армии персидского завоевателя Надир-шаха, отстояв независимость Дагестана.",
+      "Особую славу народу принёс высокогорный аул Кубачи — «село златокузнецов», чьи мастера столетиями создавали шедевры из серебра и оружия."
     ],
     traditions: [
-      "Кубачинская художественная обработка серебра — гравировка, чернь и филигрань.",
-      "Балхарская расписная керамика — знаменитые кувшины, которые лепят вручную женщины села Балхар.",
-      "Пышная даргинская свадьба с традиционными танцами и обрядом «выкупа» невесты.",
-      "Особое уважение к ремесленному труду: каждый мальчик с детства учился мастерству."
+      "Кубачинская художественная обработка серебра — гравировка и чернь.",
+      "Балхарская расписная керамика — кувшины, которые лепят вручную женщины села Балхар.",
+      "Пышная даргинская свадьба с традиционными танцами и обрядами.",
+      "Уважение к ремеслу: каждый мастер ставил на изделие своё личное клеймо."
     ],
     people: [
-      { name: "Али-Гаджи Акушинский", years: "1847–1930", role: "Учёный и миротворец", bio: "Выдающийся исламский богослов, просветитель и общественный деятель, выступавший за мир и образование." },
-      { name: "Ахмедхан Абу-Бакар", years: "1931–1991", role: "Писатель и сценарист", bio: "Народный писатель Дагестана, автор добрых и мудрых повестей «Даргинские девушки» и «Ожерелье для моей Серминаз»." },
-      { name: "Омарла Батырай", years: "1817–1902", role: "Народный поэт", bio: "Классик даргинской поэзии, чьи песни о любви, мужестве и чести передавались из уст в уста." },
-      { name: "Магомедали Магомедов", years: "1930–2022", role: "Государственный деятель", bio: "Многолетний руководитель Республики Дагестан, сохранивший мир и единство в трудные 1990-е годы." }
+      { name: "Али-Гаджи Акушинский", years: "1847–1930", role: "Учёный и миротворец", bio: "Выдающийся богослов, просветитель и общественный деятель, выступавший за мир и образование." },
+      { name: "Ахмедхан Абу-Бакар", years: "1931–1991", role: "Писатель и сценарист", bio: "Народный писатель Дагестана, автор повестей «Даргинские девушки» и «Ожерелье для моей Серминаз»." },
+      { name: "Омарла Батырай", years: "1817–1902", role: "Народный поэт", bio: "Классик даргинской поэзии, чьи песни о мужестве и чести стали народными." },
+      { name: "Магомедали Магомедов", years: "1930–2022", role: "Государственный деятель", bio: "Многолетний руководитель Республики Дагестан, сохранивший мир и единство в 1990-е годы." }
     ],
     alphabet: {
-      letters: 46,
       steps: [
         { label: "Аджам (арабская графика)", word: "вакIибила", note: "до 1928 года" },
         { label: "Латиница", word: "vakʼibila", note: "1928–1938 годы" },
@@ -869,13 +1034,6 @@ const NATIONS = {
         { ru: "Папа", native: "Ада", tr: "Ада" },
         { ru: "Брат", native: "Узи", tr: "Узи" },
         { ru: "Сестра", native: "Рурси", tr: "Рурси" }
-      ]},
-      numbers: { title: "Числа", icon: "🔢", words: [
-        { ru: "Один", native: "Ца", tr: "Ца" },
-        { ru: "Два", native: "КIел", tr: "Кел" },
-        { ru: "Три", native: "ХIябал", tr: "Хябал" },
-        { ru: "Четыре", native: "Авал", tr: "Авал" },
-        { ru: "Пять", native: "Шуел", tr: "Шуел" }
       ]},
       nature: { title: "Природа и еда", icon: "🌄", words: [
         { ru: "Вода", native: "Шин", tr: "Шин" },
@@ -897,25 +1055,28 @@ const NATIONS = {
       language: "Кумыкский (тюркская языковая семья)",
       dish: "Кумыкский хинкал (тонкие квадратики теста) и курзе"
     },
+    proverb: {
+      native: "«Бирлик бар ерде — тирлик бар»",
+      ru: "Где есть единство — там есть жизнь и достаток (Кумыкская пословица)"
+    },
     history: [
       "Кумыки сформировались на приморской равнине Дагестана в результате смешения древних местных племён с тюркоязычными народами (хазарами и кыпчаками).",
-      "С XVI по XIX век главным государством кумыков было Тарковское шамхальство — одно из самых влиятельных владений Кавказа, поддерживавшее дипломатические связи с Россией, Персией и Османской империей.",
-      "Благодаря расположению на торговых путях кумыкский язык на протяжении столетий служил языком межнационального общения на равнинном Кавказе."
+      "С XVI по XIX век главным государством кумыков было Тарковское шамхальство — одно из самых влиятельных владений Кавказа.",
+      "Благодаря расположению на торговых путях кумыкский язык столетиями служил языком межнационального общения на равнинном Кавказе."
     ],
     traditions: [
-      "Богатая музыкальная культура: игра на агач-кумузе (трёхструнном щипковом инструменте).",
-      "Зажигательный парный танец «Кумыкская лезгинка» с плавными и гордыми движениями.",
-      "Садоводство и виноградарство на плодородных равнинах Терека и Сулака.",
-      "Поэтическое состязание йырчы — народных сказителей и певцов."
+      "Игра на агач-кумузе — традиционном трёхструнном щипковом инструменте.",
+      "Парный танец «Кумыкская лезгинка» с плавными и благородными движениями.",
+      "Садоводство и виноградарство на плодородных землях Терека и Сулака.",
+      "Поэтические состязания народных певцов-сказителей (йырчы)."
     ],
     people: [
-      { name: "Ирчи Казак", years: "1830–1879", role: "Поэт-классик", bio: "Основоположник кумыкской литературы, чьи смелые стихи о свободе и справедливости стали народными песнями." },
-      { name: "Абусуфьян Акаев", years: "1872–1931", role: "Просветитель и издатель", bio: "Учёный, поэт и основатель первой типографии в Дагестане, печатавшей книги на многих языках горцев." },
-      { name: "Барият Мурадова", years: "1914–2001", role: "Актриса театра", bio: "Первая народная артистка СССР из Дагестана, звезда Кумыкского музыкально-драматического театра." },
-      { name: "Загалав Абдулбеков", years: "род. 1945", role: "Олимпийский чемпион", bio: "Первый в истории Дагестана и Северного Кавказа олимпийский чемпион по вольной борьбе (Мюнхен, 1972)." }
+      { name: "Ирчи Казак", years: "1830–1879", role: "Поэт-классик", bio: "Основоположник кумыкской литературы, чьи стихи о свободе и справедливости стали народными песнями." },
+      { name: "Абусуфьян Акаев", years: "1872–1931", role: "Просветитель и издатель", bio: "Учёный, поэт и основатель первой типографии в Дагестане, печатавшей книги на языках горцев." },
+      { name: "Барият Мурадова", years: "1914–2001", role: "Актриса театра", bio: "Первая народная артистка СССР из Дагестана, звезда Кумыкского театра." },
+      { name: "Загалав Абдулбеков", years: "род. 1945", role: "Олимпийский чемпион", bio: "Первый в истории Дагестана и Северного Кавказа олимпийский чемпион по вольной борьбе (1972)." }
     ],
     alphabet: {
-      letters: 41,
       steps: [
         { label: "Аджам (арабская графика)", word: "салам", note: "до 1928 года" },
         { label: "Латиница", word: "salam", note: "1928–1938 годы" },
@@ -935,13 +1096,6 @@ const NATIONS = {
         { ru: "Брат", native: "Къардаш", tr: "Кардаш" },
         { ru: "Сестра", native: "Къызкъардаш", tr: "Кызкардаш" }
       ]},
-      numbers: { title: "Числа", icon: "🔢", words: [
-        { ru: "Один", native: "Бир", tr: "Бир" },
-        { ru: "Два", native: "Эки", tr: "Эки" },
-        { ru: "Три", native: "Уьч", tr: "Учь" },
-        { ru: "Четыре", native: "Дёрт", tr: "Дёрт" },
-        { ru: "Пять", native: "Беш", tr: "Беш" }
-      ]},
       nature: { title: "Природа и еда", icon: "🌄", words: [
         { ru: "Вода", native: "Сув", tr: "Сув" },
         { ru: "Хлеб", native: "Экмек", tr: "Экмек" },
@@ -956,31 +1110,34 @@ const NATIONS = {
     self: "Лезгияр",
     area: "Южный Дагестан (долина реки Самур)",
     color: "#2d8a5e",
-    lead: "Древний народ Южного Дагестана, подаривший миру легендарный танец «Лезгинку», знаменитые табасаранско-лезгинские ковры и великих поэтов.",
+    lead: "Древний народ Южного Дагестана, подаривший миру легендарный танец «Лезгинку», эпос о богатыре Шарвили и великих поэтов.",
     facts: {
       capital: "Исторические центры — Ахты, Курах, Касумкент",
       language: "Лезгинский (нахско-дагестанская семья)",
       dish: "Цкан (закрытый пирог с мясом и картофелем) и афар"
     },
+    proverb: {
+      native: "«Дуст къазанмишун четин я, квадарун регьят»",
+      ru: "Друга приобрести трудно, а потерять легко (Лезгинская пословица)"
+    },
     history: [
-      "Предки лезгин (леги) упоминаются ещё древнегреческими историками и входили в состав древнего государства Кавказская Албания. На юге Дагестана сохранились древнейшие памятники письменности и архитектуры.",
+      "Предки лезгин (леги) упоминаются ещё древнегреческими историками и входили в состав древнего государства Кавказская Албания.",
       "В средние века в долине реки Самур существовали свободные союзы сельских обществ (Ахтыпара, Алтыпара, Докузпара), а также Курахское и Кюринское ханства.",
-      "Символом мужества лезгин стал народный эпос «Шарвили» — сказания о богатыре, который защищал родную землю от врагов и помогал простым людям."
+      "Символом мужества лезгин стал народный эпос «Шарвили» — сказания о богатыре, защищавшем родную землю."
     ],
     traditions: [
-      "Лезгинское ковроткачество — ковры ручной работы из натуральной шерсти с древними геометрическими узорами.",
-      "Народный праздник «Яран Сувар» — древний праздник встречи весны и обновления природы с прыжками через костёр.",
-      "Героический эпос «Шарвили» — ежегодно в селе Ахты проходит большой праздник в честь богатыря.",
-      "Знаменитые ахтынские термальные источники и каменные мосты, построенные мастерами без единого гвоздя."
+      "Лезгинское ковроткачество — ковры ручной работы из натуральной шерсти.",
+      "Праздник «Яран Сувар» — древний праздник встречи весны с прыжками через костёр.",
+      "Ежегодный праздник героического эпоса «Шарвили» в селе Ахты.",
+      "Знаменитые ахтынские каменные мосты, построенные мастерами без гвоздей."
     ],
     people: [
-      { name: "Сулейман Стальский", years: "1869–1937", role: "Народный поэт", bio: "Великий поэт-ашуг, которого Максим Горький назвал «Гомером XX века» за силу и мудрость его стихов." },
-      { name: "Етим Эмин", years: "1838–1884", role: "Поэт и гуманист", bio: "Основоположник лезгинской письменной поэзии, воспевавший доброту, дружбу народов и справедливость." },
-      { name: "Гасан Алкадарский", years: "1834–1910", role: "Историк и учёный", bio: "Выдающийся просветитель, написавший «Асари-Дагестан» — первый фундаментальный труд по истории Дагестана." },
+      { name: "Сулейман Стальский", years: "1869–1937", role: "Народный поэт", bio: "Великий поэт-ашуг, которого Максим Горький назвал «Гомером XX века»." },
+      { name: "Етим Эмин", years: "1838–1884", role: "Поэт и гуманист", bio: "Основоположник лезгинской письменной поэзии, воспевавший доброту и дружбу народов." },
+      { name: "Гасан Алкадарский", years: "1834–1910", role: "Историк и учёный", bio: "Просветитель, написавший «Асари-Дагестан» — первый фундаментальный труд по истории Дагестана." },
       { name: "Муса Манаров", years: "род. 1951", role: "Лётчик-космонавт", bio: "Герой Советского Союза, совершивший два космических полёта общей продолжительностью 541 сутки." }
     ],
     alphabet: {
-      letters: 45,
       steps: [
         { label: "Аджам (арабская графика)", word: "салам", note: "до 1928 года" },
         { label: "Латиница", word: "salam", note: "1928–1938 годы" },
@@ -1000,17 +1157,9 @@ const NATIONS = {
         { ru: "Брат", native: "Стха", tr: "Стха" },
         { ru: "Сестра", native: "Вах", tr: "Вах" }
       ]},
-      numbers: { title: "Числа", icon: "🔢", words: [
-        { ru: "Один", native: "Сад", tr: "Сад" },
-        { ru: "Два", native: "Кьвед", tr: "Квед" },
-        { ru: "Три", native: "Пуд", tr: "Пуд" },
-        { ru: "Четыре", native: "Кьуд", tr: "Куд" },
-        { ru: "Пять", native: "Вад", tr: "Вад" }
-      ]},
       nature: { title: "Природа и еда", icon: "🌄", words: [
         { ru: "Вода", native: "Яд", tr: "Яд" },
         { ru: "Хлеб", native: "Фу", tr: "Фу" },
-        { ru: "Соль", native: "Кьел", tr: "Кел" },
         { ru: "Солнце", native: "Рагъ", tr: "Раг" },
         { ru: "Гора", native: "Дагъ", tr: "Даг" }
       ]}
@@ -1028,25 +1177,28 @@ const NATIONS = {
       language: "Лакский (отдельная ветвь нахско-дагестанской семьи)",
       dish: "Лакский хинкал (маленькие «ушки» из теста) и къячи"
     },
+    proverb: {
+      native: "«КIулшиву — чани, къакIулшиву — цIан»",
+      ru: "Знание — свет, незнание — тьма (Лакская пословица)"
+    },
     history: [
-      "Лакцы живут в самом центре горного Дагестана. Их столица — древний аул Кумух — уже в VIII веке приняла ислам и стала одним из первых духовных и научных центров Кавказа.",
-      "В средние века Кази-Кумухское шамхальство (позже ханство) играло ведущую роль в политической жизни всего Дагестана.",
-      "Из-за суровых горных условий лакские мужчины издавна славились как отходники-мастера: лудильщики, ювелиры, оружейники и цирковые канатоходцы (пехлеваны), выступавшие по всей Европе и Азии."
+      "Лакцы живут в самом центре горного Дагестана. Их столица — древний аул Кумух — уже в VIII веке приняла ислам и стала одним из первых духовных центров Кавказа.",
+      "В средние века Кази-Кумухское шамхальство играло ведущую роль в политической жизни всего Дагестана.",
+      "Лакские мастера издавна славились как ювелиры, лудильщики, оружейники и цирковые канатоходцы (пехлеваны), выступавшие по всему миру."
     ],
     traditions: [
-      "Искусство лакских канатоходцев (село Цовкра) — школа акробатики на натянутом канате.",
-      "Кумухское оружейное и ювелирное дело — украшение кинжалов и поясов слоновой костью и серебром.",
-      "Любовь к науке и образованию: среди лакцев исторически очень много учёных, врачей и инженеров.",
-      "Народные сказки и притчи о смекалке и находчивости горцев."
+      "Искусство лакских канатоходцев из села Цовкра — акробатика на натянутом канате.",
+      "Кумухское оружейное и ювелирное дело — украшение кинжалов слоновой костью.",
+      "Тяга к знаниям: среди лакцев исторически много врачей, инженеров и учёных.",
+      "Богатый фольклор и притчи о смекалке и находчивости горцев."
     ],
     people: [
       { name: "Амет-Хан Султан", years: "1920–1971", role: "Лётчик-ас, дважды Герой СССР", bio: "Легендарный советский лётчик-истребитель и испытатель реактивных самолётов, сбивший 30 вражеских машин лично." },
-      { name: "Эффенди Капиев", years: "1909–1944", role: "Писатель и фронтовик", bio: "Классик дагестанской литературы, автор книги «Поэт» о Сулеймане Стальском и фронтовых записных книжек." },
-      { name: "Муса Манаров", years: "род. 1951", role: "Космонавт (родом из лакского села Кумух)", bio: "Герой Советского Союза, покоритель космоса (имеет лакские и лезгинские корни, вырос в Дагестане)." },
-      { name: "Хан-Муртазали", years: "XVIII век", role: "Полководец", bio: "Герой разгрома войск Надир-шаха в 1741 году, возглавивший объединённое войско горцев." }
+      { name: "Эффенди Капиев", years: "1909–1944", role: "Писатель и фронтовик", bio: "Классик дагестанской литературы, автор книги «Поэт» и фронтовых записных книжек." },
+      { name: "Хан-Муртазали", years: "XVIII век", role: "Полководец", bio: "Герой разгрома войск Надир-шаха в 1741 году, возглавивший объединённое войско горцев." },
+      { name: "Дандамаев Магомед", years: "1928–2017", role: "Учёный-востоковед", bio: "Всемирно известный историк Древнего Востока, член-корреспондент РАН." }
     ],
     alphabet: {
-      letters: 44,
       steps: [
         { label: "Аджам (арабская графика)", word: "салам", note: "до 1928 года" },
         { label: "Латиница", word: "salam", note: "1928–1938 годы" },
@@ -1066,13 +1218,6 @@ const NATIONS = {
         { ru: "Брат", native: "Уссу", tr: "Уссу" },
         { ru: "Сестра", native: "Ссу", tr: "Ссу" }
       ]},
-      numbers: { title: "Числа", icon: "🔢", words: [
-        { ru: "Один", native: "Ца", tr: "Ца" },
-        { ru: "Два", native: "КIира", tr: "Кира" },
-        { ru: "Три", native: "Шанма", tr: "Шанма" },
-        { ru: "Четыре", native: "Мукьва", tr: "Муква" },
-        { ru: "Пять", native: "Ххюва", tr: "Ххюва" }
-      ]},
       nature: { title: "Природа и еда", icon: "🌄", words: [
         { ru: "Вода", native: "Щин", tr: "Щин" },
         { ru: "Хлеб", native: "ЧчатI", tr: "Ччат" },
@@ -1080,8 +1225,398 @@ const NATIONS = {
         { ru: "Гора", native: "Зунтту", tr: "Зунтту" }
       ]}
     }
+  },
+
+  tabasaran: {
+    name: "Табасаранцы",
+    self: "Табасаранар",
+    area: "Юго-Восточный Дагестан (ущелье реки Рубас)",
+    color: "#a83256",
+    lead: "Народ искусных ковроделов и хранителей одного из самых сложных и богатых языков мира, занесённого в Книгу рекордов Гиннесса.",
+    facts: {
+      capital: "Исторический центр — село Хучни",
+      language: "Табасаранский (около 46–48 падежей!)",
+      dish: "Урбеч (паста из перетёртых семян льна) и тонкое чуду"
+    },
+    proverb: {
+      native: "«Зегьмет гъизигуриз — хъуркьувал»",
+      ru: "Кто трудится — к тому приходит успех (Табасаранская пословица)"
+    },
+    history: [
+      "Табасаранцы упоминаются в армянских и арабских хрониках начиная с V века нашей эры как жители древнего владения Табасаран, входившего в Кавказскую Албанию.",
+      "В средние века на их землях существовало сильное Табасаранское майсумство и кадийство, защищавшее южные рубежи Дагестана.",
+      "Главная природная и историческая жемчужина края — средневековая Крепость Семи Братьев и Одной Сестры над селом Хучни, овеянная красивой народной легендой."
+    ],
+    traditions: [
+      "Знаменитые табасаранские ковры ручной работы — секреты узоров и натуральных красителей передаются от матери к дочери.",
+      "Табасаранский язык славится своей грамматикой: в нём насчитывается более 40 падежей.",
+      "Праздник цветов и весны «Эбельцан» с народными гуляниями у Ханагского водопада.",
+      "Резьба по дереву и изготовление традиционных музыкальных инструментов."
+    ],
+    people: [
+      { name: "Мирза Калукский", years: "XVII век", role: "Поэт и полководец", bio: "Народный герой и поэт, руководивший обороной родного края и воспевавший мужество земляков." },
+      { name: "Абумуслим Джафаров", years: "1909–1969", role: "Основоположник литературы", bio: "Писатель, поэт и драматург, заложивший основы современной табасаранской литературы." },
+      { name: "Юсуф Базутаев", years: "1917–1994", role: "Поэт и педагог", bio: "Автор учебников родного языка и проникновенных стихов о природе Табасарана." },
+      { name: "Елена Исинбаева", years: "род. 1982", role: "Олимпийская чемпионка", bio: "Двукратная олимпийская чемпионка в прыжках с шестом, установившая 28 мировых рекордов (отец — табасаранец)." }
+    ],
+    alphabet: {
+      steps: [
+        { label: "Аджам (арабская графика)", word: "салам", note: "до 1928 года" },
+        { label: "Латиница", word: "salam", note: "1928–1938 годы" },
+        { label: "Кириллица", word: "салам", note: "с 1938 года" }
+      ]
+    },
+    categories: {
+      greetings: { title: "Приветствия", icon: "👋", words: [
+        { ru: "Привет", native: "Салам", tr: "Салам" },
+        { ru: "Спасибо", native: "Чухсагъул", tr: "Чухсагул" },
+        { ru: "Да", native: "Ав", tr: "Ав" },
+        { ru: "Нет", native: "Ваъ", tr: "Ва" }
+      ]},
+      family: { title: "Семья", icon: "👨‍👩‍👧", words: [
+        { ru: "Мама", native: "Баб", tr: "Баб" },
+        { ru: "Папа", native: "Аба", tr: "Аба" },
+        { ru: "Брат", native: "Чве", tr: "Чве" },
+        { ru: "Сестра", native: "Чи", tr: "Чи" }
+      ]},
+      nature: { title: "Природа и еда", icon: "🌄", words: [
+        { ru: "Вода", native: "Шту", tr: "Шту" },
+        { ru: "Хлеб", native: "Уьл", tr: "Уль" },
+        { ru: "Солнце", native: "Ригъ", tr: "Риг" },
+        { ru: "Гора", native: "Дагъ", tr: "Даг" }
+      ]}
+    }
+  },
+
+  nogai: {
+    name: "Ногайцы",
+    self: "Ногъайлар",
+    area: "Северный Дагестан (Ногайская степь)",
+    color: "#b5651d",
+    lead: "Древний степной народ Северного Дагестана, потомки вольных всадников Золотой Орды и Ногайской Орды, хранители богатейшего богатырского эпоса.",
+    facts: {
+      capital: "Центр в Дагестане — село Терекли-Мектеб",
+      language: "Ногайский (тюркская языковая семья)",
+      dish: "Ногайский чай (с молоком, маслом, солью и перцем) и бешбармак"
+    },
+    proverb: {
+      native: "«Ат — йигиттинъ канаты»",
+      ru: "Конь — крылья джигита (Ногайская пословица)"
+    },
+    history: [
+      "Своё имя ногайцы получили от темника Золотой Орды Ногая (XIII век). В XIV–XVI веках существовало обширное государство — Ногайская Орда, простиравшаяся от Волги до Иртыша и предгорий Кавказа.",
+      "Часть ногайцев обосновалась в степях Северного Дагестана (Ногайская степь), сохранив уникальную степную культуру в многонациональной горной республике.",
+      "Ногайцы славились как искусные наездники, скотоводы и сказители-жырау, хранившие в памяти тысячи строк героических сказаний."
+    ],
+    traditions: [
+      "Знаменитый ногайский чай — согревающий степной напиток, который заваривают с молоком, сливочным маслом, солью и чёрным перцем.",
+      "Игра на домбре — двухструнном щипковом инструменте, под звуки которого исполняются степные мелодии и эпос.",
+      "Богатырский эпос «Эдиге» и «Шора-батыр» — сказания о степных героях.",
+      "Традиционное валяние войлока и изготовление юрт."
+    ],
+    people: [
+      { name: "Шал-Кийиз Тиленши улы", years: "XV–XVI века", role: "Поэт-жырау", bio: "Великий степной поэт-импровизатор, чьи философские песни вошли в золотой фонд тюркской поэзии." },
+      { name: "Абдулхамид Джанибеков", years: "1879–1955", role: "Учёный и просветитель", bio: "Создатель ногайского алфавита, составитель первых букварей, словарей и собиратель фольклора." },
+      { name: "Фазиль Абдулжалилов", years: "1913–1974", role: "Писатель и поэт", bio: "Классик ногайской литературы, автор романов и повестей о жизни степного народа." },
+      { name: "Кадрия Темирбулатова", years: "1948–1978", role: "Поэтесса", bio: "Талантливая ногайская поэтесса, чьи стихи о степи, матери и родине переведены на многие языки." }
+    ],
+    alphabet: {
+      steps: [
+        { label: "Арабская графика", word: "салам", note: "до 1928 года" },
+        { label: "Латиница", word: "salam", note: "1928–1938 годы" },
+        { label: "Кириллица", word: "салам", note: "с 1938 года" }
+      ]
+    },
+    categories: {
+      greetings: { title: "Приветствия", icon: "👋", words: [
+        { ru: "Привет", native: "Салам", tr: "Салам" },
+        { ru: "Спасибо", native: "Сав бол", tr: "Сав бол" },
+        { ru: "Да", native: "Эйе", tr: "Эйе" },
+        { ru: "Нет", native: "Йок", tr: "Йок" }
+      ]},
+      family: { title: "Семья", icon: "👨‍👩‍👧", words: [
+        { ru: "Мама", native: "Ана", tr: "Ана" },
+        { ru: "Папа", native: "Ата", tr: "Ата" },
+        { ru: "Брат", native: "Кардаш", tr: "Кардаш" },
+        { ru: "Сестра", native: "Кызкардаш", tr: "Кызкардаш" }
+      ]},
+      nature: { title: "Природа и еда", icon: "🌄", words: [
+        { ru: "Вода", native: "Сув", tr: "Сув" },
+        { ru: "Хлеб", native: "Оьтпек", tr: "Отпек" },
+        { ru: "Солнце", native: "Куьн", tr: "Кунь" },
+        { ru: "Конь / Лошадь", native: "Ат", tr: "Ат" }
+      ]}
+    }
+  },
+
+  rutul: {
+    name: "Рутульцы",
+    self: "Мыхабыр",
+    area: "Высокогорный Южный Дагестан (верховья Самура)",
+    color: "#7c5295",
+    lead: "Древний высокогорный народ верховьев реки Самур, известный своим гостеприимством, ашугской поэзией и бережным отношением к природе.",
+    facts: {
+      capital: "Исторический центр — село Рутул",
+      language: "Рутульский (лезгинская ветвь нахско-дагестанской семьи)",
+      dish: "КьыцI (слоёный пирог с мясом и орехами) и хинкал"
+    },
+    proverb: {
+      native: "«Ватан — виридалай багьа я»",
+      ru: "Родина дороже всего на свете (Рутульская пословица)"
+    },
+    history: [
+      "Рутульцы — один из коренных народов Кавказской Албании. Их предки издревле жили в высокогорной долине реки Самур, охраняя важные горные перевалы.",
+      "В средние века существовало Рутульское бекство (вольное общество), объединявшее десятки высокогорных сёл. Рутул был крупным ремесленным и торговым центром.",
+      "В рутульских сёлах сохранились древние мечети XI–XII веков с каменными плитами, покрытыми искусной арабской вязью."
+    ],
+    traditions: [
+      "Ашугская поэзия — искусство народных певцов-поэтов, слагающих песни под аккомпанемент саза.",
+      "Праздник «Эр» — встреча весны с народными играми, скачками и угощением всех гостей.",
+      "Вязание тёплых узорчатых шерстяных носков (джурабов) с древними символами солнца и гор.",
+      "Обычай «мел» — коллективная взаимопомощь, когда всем селом строят дом молодой семье."
+    ],
+    people: [
+      { name: "Кюре Мелик", years: "XVII век", role: "Поэт и ашуг", bio: "Один из первых известных рутульских поэтов, чьи песни о любви к родине сохранились в народе." },
+      { name: "Джамесеб Саларов", years: "1894–1975", role: "Народный певец-ашуг", bio: "Знаменитый сказитель и поэт, хранитель устного народного творчества рутульцев." },
+      { name: "Гасрет Алиев", years: "1922–1981", role: "Герой Советского Союза", bio: "Отважный разведчик Великой Отечественной войны, удостоенный звания Героя за форсирование Днепра." },
+      { name: "Сакинат Магомедова", years: "род. 1979", role: "Чемпионка мира и Европы", bio: "Многократная чемпионка мира и Европы по паратхэквондо, гордость рутульского народа." }
+    ],
+    alphabet: {
+      steps: [
+        { label: "Бесписьменный период и аджам", word: "салам", note: "до 1990 года" },
+        { label: "Кириллический алфавит", word: "салам", note: "создан в 1990 году" }
+      ]
+    },
+    categories: {
+      greetings: { title: "Приветствия", icon: "👋", words: [
+        { ru: "Привет", native: "Салам", tr: "Салам" },
+        { ru: "Спасибо", native: "Сагърай", tr: "Саграй" },
+        { ru: "Да", native: "Эй", tr: "Эй" },
+        { ru: "Нет", native: "Ваъ", tr: "Ва" }
+      ]},
+      family: { title: "Семья", icon: "👨‍👩‍👧", words: [
+        { ru: "Мама", native: "Нин", tr: "Нин" },
+        { ru: "Папа", native: "Дид", tr: "Дид" },
+        { ru: "Брат", native: "Шу", tr: "Шу" },
+        { ru: "Сестра", native: "Риши", tr: "Риши" }
+      ]},
+      nature: { title: "Природа и еда", icon: "🌄", words: [
+        { ru: "Вода", native: "Хьед", tr: "Хед" },
+        { ru: "Хлеб", native: "Хыв", tr: "Хыв" },
+        { ru: "Солнце", native: "Виригъ", tr: "Вириг" },
+        { ru: "Гора", native: "Бан", tr: "Бан" }
+      ]}
+    }
+  },
+
+  agul: {
+    name: "Агулы",
+    self: "Агулар",
+    area: "Центральный Южный Дагестан (четыре горных ущелья)",
+    color: "#3d7a8a",
+    lead: "Один из самых высокогорных народов Дагестана, живущий в четырёх живописных ущельях на высоте более 2000 метров над уровнем моря.",
+    facts: {
+      capital: "Исторический центр — село Тпиг",
+      language: "Агульский (лезгинская ветвь нахско-дагестанской семьи)",
+      dish: "Агульский хинкал с сушёной колбасой и пироги с горными травами"
+    },
+    proverb: {
+      native: "«Сув сувалди гьалтдач, инсан инсандилди гьалтда»",
+      ru: "Гора с горой не сойдётся, а человек с человеком сойдётся (Агульская пословица)"
+    },
+    history: [
+      "Агулы — коренной народ Кавказской Албании, веками живший в труднодоступных ущельях (Агул-дере, Курах-дере, Хушан-дере и Хпюк-дере).",
+      "Благодаря неприступным скалам агульские сёла-крепости с боевыми башнями служили надёжной защитой от иноземных завоевателей.",
+      "В 1990 году для агульского языка был официально создан алфавит на основе кириллицы, началось издание учебников и книг для детей."
+    ],
+    traditions: [
+      "Каменное зодчество: старинные мечети и боевые башни в сёлах Тпиг, Рича, Буркихан.",
+      "Праздник первой борозды «Хьадан» с обрядовыми хлебцами и состязаниями в силе.",
+      "Искусство резьбы по камню — украшение фасадов домов и родников орнаментами.",
+      "Бережное сохранение диалектов каждого из четырёх горных ущелий."
+    ],
+    people: [
+      { name: "Магомед-Загид Аминов", years: "1938–1994", role: "Учёный-языковед", bio: "Исследователь агульского языка, автор научных трудов по грамматике языков Дагестана." },
+      { name: "Фатхула Джамалов", years: "1927–2005", role: "Поэт и писатель", bio: "Один из зачинателей агульской письменной поэзии, воспевавший родные горы." },
+      { name: "Шериф Шерифов", years: "род. 1989", role: "Олимпийский чемпион", bio: "Олимпийский чемпион по вольной борьбе (Лондон, 2012), прославивший агульский народ на весь мир." },
+      { name: "Абдулгамид Магомедов", years: "1920–1998", role: "Педагог и просветитель", bio: "Заслуженный учитель, посвятивший жизнь образованию детей в высокогорных школах." }
+    ],
+    alphabet: {
+      steps: [
+        { label: "Устная традиция и аджам", word: "салам", note: "до 1990 года" },
+        { label: "Кириллический алфавит", word: "салам", note: "создан в 1990 году" }
+      ]
+    },
+    categories: {
+      greetings: { title: "Приветствия", icon: "👋", words: [
+        { ru: "Привет", native: "Салам", tr: "Салам" },
+        { ru: "Спасибо", native: "Баркалла", tr: "Баркалла" },
+        { ru: "Да", native: "Гьа", tr: "Га" },
+        { ru: "Нет", native: "Ваъ", tr: "Ва" }
+      ]},
+      family: { title: "Семья", icon: "👨‍👩‍👧", words: [
+        { ru: "Мама", native: "Баб", tr: "Баб" },
+        { ru: "Папа", native: "Дад", tr: "Дад" },
+        { ru: "Брат", native: "Чу", tr: "Чу" },
+        { ru: "Сестра", native: "Чи", tr: "Чи" }
+      ]},
+      nature: { title: "Природа и еда", icon: "🌄", words: [
+        { ru: "Вода", native: "Хьед", tr: "Хед" },
+        { ru: "Хлеб", native: "Гуни", tr: "Гуни" },
+        { ru: "Солнце", native: "Рагъ", tr: "Раг" },
+        { ru: "Гора", native: "Сув", tr: "Сув" }
+      ]}
+    }
+  },
+
+  tsakhur: {
+    name: "Цахуры",
+    self: "Йихъбы",
+    area: "Самый юг Дагестана (верховья Самура, Рутульский район)",
+    color: "#4f6d7a",
+    lead: "Древний горский народ с самой южной точки России, прославившийся созданием первого в Дагестане университета (медресе) ещё в XI веке!",
+    facts: {
+      capital: "Исторический центр — село Цахур",
+      language: "Цахурский (лезгинская ветвь нахско-дагестанской семьи)",
+      dish: "Цахурский хинкал с сушёным мясом и зеленью (гьаIшу)"
+    },
+    proverb: {
+      native: "«Китаб — акьулдин булах я»",
+      ru: "Книга — родник мудрости (Цахурская пословица)"
+    },
+    history: [
+      "Цахуры — один из древнейших народов Кавказской Албании. Их историческая столица — село Цахур — расположена у подножия Главного Кавказского хребта.",
+      "В 1075 году в селе Цахур было основано знаменитое медресе (высшая школа), где изучали не только богословие, но и астрономию, медицину, математику и переводили книги на родной язык.",
+      "В средние века существовало Цахурское султанство, игравшее важную роль на юге Кавказа."
+    ],
+    traditions: [
+      "Многовековая книжная культура — цахурские учёные переводили арабские научные трактаты ещё в XIII веке.",
+      "Уникальная система звуков цахурского языка (включающая редкие фарингализованные гласные).",
+      "Овцеводство и ковроделие — создание прочных безворсовых ковров-сумахов.",
+      "Праздник весны «Юхьхьан» с обрядовыми песнями и угощением соседей."
+    ],
+    people: [
+      { name: "Абдулла Курбанов", years: "1914–1984", role: "Поэт и писатель", bio: "Видный цахурский поэт и просветитель, автор лирических стихов о родном Самуре." },
+      { name: "Гарун Ибрагимов", years: "1925–2012", role: "Учёный-кавказовед", bio: "Доктор филологических наук, создатель современной цахурской письменности, букварей и словарей." },
+      { name: "Мусаев Магомед", years: "род. 1963", role: "Общественный деятель и меценат", bio: "Поддерживает образовательные проекты, издание детских книг и сохранение цахурского языка." },
+      { name: "Исаев Юсуф", years: "XIX век", role: "Учёный и просветитель", bio: "Хранитель древних рукописей цахурского медресе, передавший знания следующим поколениям." }
+    ],
+    alphabet: {
+      steps: [
+        { label: "Аджам (XIII–XX века)", word: "салам", note: "древние переводы" },
+        { label: "Кириллический алфавит", word: "салам", note: "обновлён в 1990 году" }
+      ]
+    },
+    categories: {
+      greetings: { title: "Приветствия", icon: "👋", words: [
+        { ru: "Привет", native: "Салам", tr: "Салам" },
+        { ru: "Спасибо", native: "Сагъул", tr: "Сагул" },
+        { ru: "Да", native: "ГьаI", tr: "Га" },
+        { ru: "Нет", native: "Ваъ", tr: "Ва" }
+      ]},
+      family: { title: "Семья", icon: "👨‍👩‍👧", words: [
+        { ru: "Мама", native: "Йеди", tr: "Йеди" },
+        { ru: "Папа", native: "Декк", tr: "Декк" },
+        { ru: "Брат", native: "Чодж", tr: "Чодж" },
+        { ru: "Сестра", native: "Йичи", tr: "Йичи" }
+      ]},
+      nature: { title: "Природа и еда", icon: "🌄", words: [
+        { ru: "Вода", native: "Хьан", tr: "Хян" },
+        { ru: "Хлеб", native: "Хьыв", tr: "Хыв" },
+        { ru: "Солнце", native: "Виригъ", tr: "Вириг" },
+        { ru: "Гора", native: "Сува", tr: "Сува" }
+      ]}
+    }
   }
 };
+
+/* ============================================================
+   ПАСПОРТ ИССЛЕДОВАТЕЛЯ (LOCALSTORAGE + ДОСТИЖЕНИЯ)
+   ============================================================ */
+const STORAGE_KEY = 'golos_naroda_progress_v1';
+let progress = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
+  visited: [],
+  quizCorrect: 0,
+  memoryWins: 0
+};
+
+function saveProgress() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  renderPassport();
+  renderNationsList();
+}
+
+const BADGES = [
+  {
+    id: 'first_step',
+    icon: '🥾',
+    title: 'Первый шаг в горы',
+    desc: 'Открой страницу любого народа',
+    check: p => p.visited.length >= 1
+  },
+  {
+    id: 'south_explorer',
+    icon: '🏔️',
+    title: 'Знаток Южного Дагестана',
+    desc: 'Изучи лезгин, табасаранцев, рутульцев, агулов и цахуров',
+    check: p => ['lezgin', 'tabasaran', 'rutul', 'agul', 'tsakhur'].every(k => p.visited.includes(k))
+  },
+  {
+    id: 'steppe_sea',
+    icon: '🌊',
+    title: 'От степи до Каспия',
+    desc: 'Изучи кумыков и ногайцев',
+    check: p => ['kumyk', 'nogai'].every(k => p.visited.includes(k))
+  },
+  {
+    id: 'polyglot',
+    icon: '🗣️',
+    title: 'Юный полиглот',
+    desc: 'Дай 5 правильных ответов в викторине',
+    check: p => p.quizCorrect >= 5
+  },
+  {
+    id: 'memory_master',
+    icon: '🃏',
+    title: 'Мастер памяти',
+    desc: 'Собери все пары слов в игре «Найди пару»',
+    check: p => p.memoryWins >= 1
+  },
+  {
+    id: 'grand_ambassador',
+    icon: '👑',
+    title: 'Посол дружбы Дагестана',
+    desc: 'Изучи все 10 народов республики!',
+    check: p => p.visited.length >= 10
+  }
+];
+
+function renderPassport() {
+  const count = progress.visited.length;
+  document.getElementById('navPassportBtn').textContent = `🏅 Паспорт: ${count}/10`;
+  document.getElementById('passportSubtitle').textContent = `Изучено народов: ${count} из 10 · Правильных ответов в викторине: ${progress.quizCorrect}`;
+  document.getElementById('passportProgress').style.width = `${(count / 10) * 100}%`;
+
+  let rank = 'Новичок в горах';
+  if (count >= 10) rank = 'Почётный знаток Страны гор!';
+  else if (count >= 6) rank = 'Опытный путешественник';
+  else if (count >= 3) rank = 'Исследователь аулов';
+  document.getElementById('passportRank').textContent = `Звание: ${rank}`;
+
+  const badgesGrid = document.getElementById('badgesGrid');
+  badgesGrid.innerHTML = BADGES.map(b => {
+    const unlocked = b.check(progress);
+    return `
+      <div class="badge-item ${unlocked ? 'unlocked' : ''}">
+        <div class="badge-icon">${unlocked ? b.icon : '🔒'}</div>
+        <div class="badge-info">
+          <h4>${b.title}</h4>
+          <p>${b.desc}</p>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
 
 /* ============================================================
    ИНИЦИАЛИЗАЦИЯ СЛОВАРЯ И УТИЛИТ
@@ -1110,7 +1645,7 @@ function showToast(msg) {
   t.textContent = msg;
   t.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
 }
 
 function speak(text) {
@@ -1120,40 +1655,45 @@ function speak(text) {
   u.lang = 'ru-RU';
   u.rate = 0.85;
   speechSynthesis.speak(u);
-  showToast('🔊 Демо-озвучка слова');
+  showToast('🔊 Озвучка слова');
 }
 
 /* ============================================================
    РЕНДЕР КАРТОЧЕК НАРОДОВ И ЛЕГЕНДЫ КАРТЫ
    ============================================================ */
-const grid = document.getElementById('nationsGrid');
-const legendList = document.getElementById('mapLegendList');
+function renderNationsList() {
+  const grid = document.getElementById('nationsGrid');
+  const legendList = document.getElementById('mapLegendList');
+  grid.innerHTML = '';
+  legendList.innerHTML = '';
 
-Object.entries(NATIONS).forEach(([key, n]) => {
-  // Кнопка в легенде карты
-  const legBtn = document.createElement('button');
-  legBtn.className = 'legend-item';
-  legBtn.innerHTML = `
-    <span class="legend-dot" style="background:${n.color}"></span>
-    <span class="legend-name">${n.name}</span>
-    <span class="legend-area">${n.area} →</span>
-  `;
-  legBtn.addEventListener('click', () => openNationPage(key));
-  legendList.appendChild(legBtn);
+  Object.entries(NATIONS).forEach(([key, n]) => {
+    const isVisited = progress.visited.includes(key);
 
-  // Карточка в сетке
-  const card = document.createElement('div');
-  card.className = 'nation-card';
-  card.style.borderBottomColor = n.color;
-  card.innerHTML = `
-    <div class="dot" style="background:${n.color}">${n.name[0]}</div>
-    <h3>${n.name}</h3>
-    <div class="self">${n.self}</div>
-    <div class="open-pill">Открыть страницу →</div>
-  `;
-  card.addEventListener('click', () => openNationPage(key));
-  grid.appendChild(card);
-});
+    const legBtn = document.createElement('button');
+    legBtn.className = 'legend-item';
+    legBtn.innerHTML = `
+      <span class="legend-dot" style="background:${n.color}"></span>
+      <span class="legend-name">${n.name}</span>
+      ${isVisited ? '<span class="legend-check">✅</span>' : ''}
+    `;
+    legBtn.addEventListener('click', () => openNationPage(key));
+    legendList.appendChild(legBtn);
+
+    const card = document.createElement('div');
+    card.className = 'nation-card';
+    card.style.borderBottomColor = n.color;
+    card.innerHTML = `
+      ${isVisited ? '<span class="visited-stamp">✓ Изучено</span>' : ''}
+      <div class="dot" style="background:${n.color}">${n.name[0]}</div>
+      <h3>${n.name}</h3>
+      <div class="self">${n.self}</div>
+      <div class="open-pill">Открыть страницу →</div>
+    `;
+    card.addEventListener('click', () => openNationPage(key));
+    grid.appendChild(card);
+  });
+}
 
 document.querySelectorAll('.map-pin').forEach(pin => {
   pin.addEventListener('click', () => openNationPage(pin.dataset.nation));
@@ -1169,9 +1709,15 @@ function openNationPage(key, pushHash = true) {
   const n = NATIONS[key];
   if (!n) return;
 
+  // Отмечаем в паспорте исследователя
+  if (!progress.visited.includes(key)) {
+    progress.visited.push(key);
+    saveProgress();
+    showToast(`🏅 Открыт народ: ${n.name}! (${progress.visited.length}/10)`);
+  }
+
   if (pushHash) history.pushState({ nation: key }, '', '#' + key);
 
-  // Заполняем шапку
   document.getElementById('npHero').style.background = `linear-gradient(135deg, ${n.color}, ${shade(n.color, -28)})`;
   document.getElementById('npTitle').textContent = n.name;
   document.getElementById('npSelf').textContent = `Самоназвание: ${n.self}`;
@@ -1184,11 +1730,18 @@ function openNationPage(key, pushHash = true) {
     <div><strong>Национальное блюдо</strong>${n.facts.dish}</div>
   `;
 
-  // История и традиции
   document.getElementById('npHistory').innerHTML = n.history.map(p => `<p>${p}</p>`).join('');
   document.getElementById('npTraditions').innerHTML = n.traditions.map(t => `<li>${t}</li>`).join('');
 
-  // Известные люди
+  document.getElementById('npProverb').innerHTML = `
+    <div>
+      <div style="font-size:0.78rem;text-transform:uppercase;color:var(--muted);font-weight:bold;margin-bottom:4px">Мудрость гор</div>
+      <div class="proverb-native">${n.proverb.native}</div>
+      <div class="proverb-ru">${n.proverb.ru}</div>
+    </div>
+    <button class="play-btn" onclick="speak('${n.proverb.native.replace(/'/g, "\'")}')">▶</button>
+  `;
+
   document.getElementById('npPeople').innerHTML = n.people.map(p => `
     <div class="person-card" style="border-bottom-color:${n.color}">
       <div class="person-top">
@@ -1202,7 +1755,6 @@ function openNationPage(key, pushHash = true) {
     </div>
   `).join('');
 
-  // Алфавит
   document.getElementById('npAlphabet').innerHTML = n.alphabet.steps.map((s, i) => `
     <div class="alpha-step">
       <div class="num">${i + 1}</div>
@@ -1211,7 +1763,6 @@ function openNationPage(key, pushHash = true) {
     </div>
   `).join('');
 
-  // Категории слов
   const catKeys = Object.keys(n.categories);
   const tabsEl = document.getElementById('npCatTabs');
   const wordsEl = document.getElementById('npWordsList');
@@ -1222,7 +1773,7 @@ function openNationPage(key, pushHash = true) {
         <div class="ru">${w.ru}</div>
         <div class="native">${w.native}</div>
         <div class="tr">[${w.tr}]</div>
-        <button class="play-btn" onclick="speak('${w.native.replace(/'/g, "\\'")}')">▶</button>
+        <button class="play-btn" onclick="speak('${w.native.replace(/'/g, "\'")}')">▶</button>
       </div>
     `).join('');
   }
@@ -1243,7 +1794,6 @@ function openNationPage(key, pushHash = true) {
 
   renderWords(catKeys[0]);
 
-  // Переключаем экраны
   homeView.classList.add('hidden');
   nationPage.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1264,7 +1814,6 @@ function showHome(scrollToId = null) {
 document.getElementById('backToHomeBtn').addEventListener('click', () => showHome());
 document.getElementById('goHomeBrand').addEventListener('click', () => showHome());
 
-// Поддержка кнопки "Назад" в браузере и прямых ссылок #avar
 window.addEventListener('popstate', () => {
   const hash = window.location.hash.replace('#', '');
   if (NATIONS[hash]) openNationPage(hash, false);
@@ -1274,13 +1823,8 @@ window.addEventListener('popstate', () => {
   }
 });
 
-if (window.location.hash) {
-  const initialKey = window.location.hash.replace('#', '');
-  if (NATIONS[initialKey]) openNationPage(initialKey, false);
-}
-
 /* ============================================================
-   ПОИСК, СЛОВО ДНЯ И ВИКТОРИНА
+   ПОИСК, СЛОВО ДНЯ, ВИКТОРИНА И ИГРА «НАЙДИ ПАРУ»
    ============================================================ */
 const globalSearch = document.getElementById('globalSearch');
 const searchResults = document.getElementById('searchResults');
@@ -1290,7 +1834,7 @@ globalSearch.addEventListener('input', () => {
   if (!q) { searchResults.innerHTML = ''; return; }
   const found = ALL_WORDS.filter(w =>
     w.ru.toLowerCase().includes(q) || w.native.toLowerCase().includes(q)
-  ).slice(0, 25);
+  ).slice(0, 30);
 
   if (!found.length) {
     searchResults.innerHTML = '<div style="padding:16px;color:var(--muted);text-align:center">Ничего не найдено</div>';
@@ -1312,7 +1856,7 @@ document.getElementById('wotd').innerHTML = `
   <div class="word">${wotdWord.native}</div>
   <div style="opacity:0.85;font-style:italic">${wotdWord.nationName} · [${wotdWord.tr}]</div>
   <div class="translation">${wotdWord.ru}</div>
-  <button class="play-btn wide" style="margin-top:14px" onclick="speak('${wotdWord.native.replace(/'/g, "\\'")}')">▶ Послушать</button>
+  <button class="play-btn wide" style="margin-top:14px" onclick="speak('${wotdWord.native.replace(/'/g, "\'")}')">▶ Послушать</button>
 `;
 
 // Викторина
@@ -1320,13 +1864,22 @@ let qScore = 0, qTotal = 0, currentCorrect = '';
 function newQuiz() {
   const keys = Object.keys(NATIONS);
   currentCorrect = keys[Math.floor(Math.random() * keys.length)];
-  const greeting = NATIONS[currentCorrect].categories.greetings.words[0];
-  document.getElementById('quizGreeting').textContent = greeting.native;
+
+  const wordPool = [
+    ...NATIONS[currentCorrect].categories.family.words.filter(w => w.ru === 'Мама'),
+    ...NATIONS[currentCorrect].categories.nature.words.filter(w => w.ru === 'Вода' || w.ru === 'Хлеб')
+  ];
+  const quizWord = wordPool[Math.floor(Math.random() * wordPool.length)];
+
+  document.getElementById('quizPrompt').textContent = `На языке какого народа слово «${quizWord.ru}» звучит так:`;
+  document.getElementById('quizGreeting').textContent = quizWord.native;
   document.getElementById('quizFeedback').textContent = '';
 
-  const shuffled = [...keys].sort(() => Math.random() - 0.5);
+  const wrongKeys = keys.filter(k => k !== currentCorrect).sort(() => Math.random() - 0.5).slice(0, 3);
+  const options = [currentCorrect, ...wrongKeys].sort(() => Math.random() - 0.5);
+
   const optsEl = document.getElementById('quizOptions');
-  optsEl.innerHTML = shuffled.map(k => `<button class="quiz-opt" data-key="${k}">${NATIONS[k].name}</button>`).join('');
+  optsEl.innerHTML = options.map(k => `<button class="quiz-opt" data-key="${k}">${NATIONS[k].name}</button>`).join('');
 
   optsEl.querySelectorAll('.quiz-opt').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1335,12 +1888,14 @@ function newQuiz() {
       if (btn.dataset.key === currentCorrect) {
         btn.classList.add('correct');
         qScore++;
+        progress.quizCorrect++;
+        saveProgress();
         fb.textContent = '✅ Правильно! Молодец!';
         fb.style.color = '#28a745';
       } else {
         btn.classList.add('wrong');
         optsEl.querySelector(`[data-key="${currentCorrect}"]`).classList.add('correct');
-        fb.textContent = `❌ Это приветствие народа: ${NATIONS[currentCorrect].name}`;
+        fb.textContent = `❌ Это язык народа: ${NATIONS[currentCorrect].name}`;
         fb.style.color = '#dc3545';
       }
       qTotal++;
@@ -1349,7 +1904,73 @@ function newQuiz() {
   });
 }
 document.getElementById('nextQuiz').addEventListener('click', newQuiz);
+
+// Игра «Найди пару»
+let memFlipped = [], memMatchedCount = 0;
+function initMemoryGame() {
+  memFlipped = [];
+  memMatchedCount = 0;
+  const gridEl = document.getElementById('memoryGrid');
+
+  // Выбираем 4 случайных слова из разных народов
+  const sample = [...ALL_WORDS].sort(() => Math.random() - 0.5).slice(0, 4);
+  const cards = [];
+  sample.forEach((item, idx) => {
+    cards.push({ id: idx, text: item.native, sub: item.nationName });
+    cards.push({ id: idx, text: item.ru, sub: 'Перевод' });
+  });
+  cards.sort(() => Math.random() - 0.5);
+
+  gridEl.innerHTML = '';
+  cards.forEach(c => {
+    const el = document.createElement('div');
+    el.className = 'mem-card';
+    el.innerHTML = '❓';
+    el.addEventListener('click', () => {
+      if (el.classList.contains('flipped') || el.classList.contains('matched') || memFlipped.length >= 2) return;
+      el.classList.add('flipped');
+      el.innerHTML = `<span>${c.text}</span><small>${c.sub}</small>`;
+      memFlipped.push({ el, card: c });
+
+      if (memFlipped.length === 2) {
+        const [a, b] = memFlipped;
+        if (a.card.id === b.card.id) {
+          setTimeout(() => {
+            a.el.classList.add('matched');
+            b.el.classList.add('matched');
+            memFlipped = [];
+            memMatchedCount++;
+            if (memMatchedCount === 4) {
+              progress.memoryWins++;
+              saveProgress();
+              showToast('🎉 Отлично! Все пары найдены!');
+            }
+          }, 350);
+        } else {
+          setTimeout(() => {
+            a.el.classList.remove('flipped');
+            b.el.classList.remove('flipped');
+            a.el.innerHTML = '❓';
+            b.el.innerHTML = '❓';
+            memFlipped = [];
+          }, 850);
+        }
+      }
+    });
+    gridEl.appendChild(el);
+  });
+}
+
+// Старт приложения
+renderNationsList();
+renderPassport();
 newQuiz();
+initMemoryGame();
+
+if (window.location.hash) {
+  const initialKey = window.location.hash.replace('#', '');
+  if (NATIONS[initialKey]) openNationPage(initialKey, false);
+}
 </script>
 </body>
 </html>
